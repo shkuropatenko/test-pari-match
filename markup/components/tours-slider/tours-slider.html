@@ -1,0 +1,27 @@
+<div class="tours-slider">
+  {{#each tour_box}}
+  <div>
+    <div class="tour-box">
+      <div class="img">
+        <img src="static/images/content/{{img_country}}" alt="image description">
+      </div>
+
+      <div class="row">
+        <div class="title-box">
+          <strong class="name">{{country_name}}</strong>
+          <h3><a href="#">{{title}}</a></h3>
+        </div>
+        <span class="star-rating"><span>star rating</span></span>
+      </div>
+
+      <div class="info-tour">
+        <div class="info-date">
+          <span class="dates-title">{{dates_title}}</span>
+          <time>{{time}} <span>{{days}}</span></time>
+        </div>
+        <span class="cost">{{cost}} <span>/ person</span></span>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

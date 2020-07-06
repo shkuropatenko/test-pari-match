@@ -1,0 +1,233 @@
+// Common styles of the project
+@import url('https://db.onlinewebfonts.com/c/c03740f2ffb689fef4bbb9c26116c4c1?family=PariMatchRegular');
+@import 'vendors/include-media';
+@import 'vendors/normalize';
+
+@import 'base/typography';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/forms';
+
+@import 'icons/icons';
+
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 462px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper-holder {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background: $dark-black url(../images/content/bg-body.jpg) no-repeat 50% 0;
+
+  @include media('>=1522px') {
+    background-size: cover;
+  }
+
+  .left-illustration span,
+  .right-illustration span {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .left-illustration {
+    span {
+      width: 349px;
+      height: 452px;
+      left: -100px;
+      bottom: 346px;
+      background: url(../images/content/person-01.png) no-repeat;
+      background-size: 100% 100%;
+
+      @include media('>=tablet') {
+        bottom: -172px;
+        width: 508px;
+        height: 662px;
+        left: -107px;
+      }
+
+      @include media('>=1522px') {
+        bottom: -18.4vw;
+        width: 45.938vw;
+        height: 59.375vw;
+        left: -13vw;
+      }
+    }
+  }
+
+  .right-illustration {
+    left: auto !important;
+    right: 0 !important;
+
+    span {
+      width: 333px;
+      height: 292px;
+      right: -68px;
+      bottom: 297px;
+      background: url(../images/content/person-02.png) no-repeat;
+      background-size: 100% 100%;
+
+      @include media('>=tablet') {
+        bottom: 41px;
+        width: 509px;
+        height: 451px;
+        right: -8.4vw;
+      }
+
+      @include media('>=1522px') {
+        bottom: -1.7vw;
+        width: 47.709vw;
+        height: 41.771vw;
+        right: -12vw;
+      }
+    }
+  }
+}
+
+.main {
+  padding: 0 10px;
+  padding-top: 237px;
+  flex: 1 1 auto;
+
+  @include media('>=tablet') {
+    padding-top: 194px;
+    margin-bottom: -94px;
+  }
+
+  @include media('>=1260px') {
+    padding-top: 15vw;
+  }
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  @include media('>=tablet') {
+    padding: 0 0 438px;
+  }
+
+  @include media('>=1260px') {
+    padding: 0 0 129px;
+  }
+}
+
+.main-heading {
+  margin: 0 auto 34px;
+  max-width: 694px;
+
+  @include media('>=tablet') {
+    margin-bottom: 56px;
+  }
+
+  .hide-text {
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+.section-boxes {
+  font-size: 14px;
+  min-height: 676px;
+
+  @include media('>=tablet') {
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  > div {
+    @include media('>=tablet') {
+      max-width: 450px;
+    }
+  }
+
+  .btn {
+    margin: 0 0 4px;
+
+    @include media('>=tablet') {
+      margin: 0 16px 7px;
+    }
+  }
+}
+
+.rate {
+  padding-bottom: 485px;
+
+  @include media('>=tablet') {
+    padding-bottom: 0;
+  }
+
+  .btn {
+    @include media('>=tablet') {
+      padding: 0.3em 0.6em 0.38em;
+    }
+  }
+}
+
+.look {
+  .btn {
+    font-weight: normal;
+
+    @include media('<tablet') {
+      font-size: 36px;
+      line-height: 39px;
+      padding: 0.3em 1em 0.38em;
+    }
+  }
+}
+
+.sub-text {
+  display: block;
+  margin: 0 0 13px;
+  font: 40px/1.1 $button-font-sans-serif;
+
+  @include media('>=tablet') {
+    margin: 0 0 24px;
+  }
+}
+
+.sub-text-small {
+  @include media('<tablet') {
+    font-size: 32px;
+  }
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}

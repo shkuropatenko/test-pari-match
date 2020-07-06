@@ -1,0 +1,62 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+@import 'vendors/include-media';
+
+.btn {
+  color: $btn-color;
+  background: $btn-background;
+  font: bold 33px/36px $button-font-sans-serif;
+  transform: skew(-15deg);
+  border: 1px solid $btn-background;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  outline: none;
+  padding: $btn-padding;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+
+  @include media('>=tablet') {
+    font-size: 50px;
+    line-height: 54px;
+    min-width: 230px;
+    padding: 0.3em 0.36em 0.38em;
+  }
+
+  &:hover,
+  &:focus {
+    color: $btn-background;
+    background: $btn-color;
+    border-color: $btn-background;
+  }
+
+  &.btn-inverse {
+    color: $btn-background;
+    background: $btn-color;
+    border-color: $btn-background;
+
+    &:hover,
+    &:focus {
+      color: $btn-color;
+      background: $btn-background;
+      border-color: $btn-color;
+    }
+  }
+
+  &.btn-border {
+    border-width: 4px;
+    border-color: #000;
+
+    &:hover,
+    &:focus {
+      background: $btn-color;
+      border-color: $btn-background;
+    }
+  }
+
+  span {
+    display: block;
+    transform: skew(15deg);
+  }
+}

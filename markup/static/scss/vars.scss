@@ -1,0 +1,51 @@
+$gray: #ACBACF;
+$black: #333;
+$dark-black: #000;
+$white: #fff;
+$yellow: #f8ff14;
+$base-font-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$button-font-sans-serif: 'PariMatchRegular', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+// This is the default html and body font-size for the base rem value.
+$rem-base: 16px;
+
+// Body
+$base-text-color: $white !default;
+$base-background-color: $dark-black !default;
+$font-size-base: 16px !default;
+$line-height-base: 1.625 !default;
+$base-font-family: $base-font-sans-serif !default;
+
+$vertical-rhythm: ($line-height-base * 1em);
+
+$base-min-width: 320px;
+
+// Liks
+$base-link-color: $white;
+
+// Buttons
+$btn-color: $dark-black !default;
+$btn-background: $yellow !default;
+$btn-padding: 0.3em 1.36em 0.38em !default;
+$btn-font-size: inherit !default;
+
+// Forms
+$form-element-padding: $btn-padding !default;
+$form-element-border-color: $gray !default;
+$form-element-focus-border-color: $black !default;
+$placeholder-color: $gray !default;
+
+// Headers
+$h1-font-size: 36px !default;
+$h2-font-size: 24px !default;
+$h3-font-size: 20px !default;
+$h4-font-size: 18px !default;
+$h5-font-size: 16px !default;
+$h6-font-size: 15px !default;
+
+$headings-font-family: inherit !default;
+$headings-color: inherit !default;
+
+
+$animation-speed: 0.3s;
+

@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="home">
+    <div class="wrapper">
+
+      <div class="wrapper-holder">
+        %=symbols=%
+        {{> header/header}}
+        <main class="main">
+
+          <div class="container">
+            <div class="section-boxes">
+              <div class="rate">
+                {{#each __pages}}
+                <a href="{{href}}">{{name}}</a> <br>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+
+        </main>
+
+        {{> footer/footer}}
+
+        <div data-relative-input="true" id="scene">
+          <div data-depth="0.1" class="left-illustration"><span></span></div>
+          <div data-depth="0.1" class="right-illustration"><span></span></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    {{!
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery%=min=%.js"></script>
+    }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery%=min=%.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+</body>
+
+</html>

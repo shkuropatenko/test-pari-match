@@ -1,0 +1,182 @@
+.footer {
+  background: rgba($dark-black, 0.8);
+  padding: 25px 20px 20px;
+  margin: 0 0 10px;
+  position: relative;
+  z-index: 2;
+
+  @include media('>=tablet') {
+    position: relative;
+    z-index: 1;
+    padding-top: 33px;
+    margin: 0;
+  }
+
+  @include media('>=desktop') {
+    padding: 32px 52px;
+  }
+
+  .circle {
+    display: block;
+    background: url('../images/content/sprite-icons.png') no-repeat -223px -41px;
+    width: 27px;
+    height: 26px;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media('>=desktop') {
+    align-items: center;
+  }
+}
+
+.stores {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 0 30px;
+
+  @include media('>=tablet') {
+    width: auto;
+    order: 2;
+    padding-right: 149px;
+  }
+
+  @include media('>=desktop') {
+    padding: 0 110px 0 0;
+  }
+}
+
+.store-btn {
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 108px;
+  height: 33px;
+  margin: 0 4px;
+  text-decoration: none;
+
+  &.app-store {
+    background: url('../images/content/sprite-icons.png') no-repeat;
+  }
+
+  &.google-play {
+    background: url('../images/content/sprite-icons.png') no-repeat -116px 0;
+  }
+}
+
+.logo-items {
+  @extend %listreset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 200px;
+  padding: 4px 0 0;
+  margin: 0 0 0 7px;
+
+  @include media('>=tablet') {
+    order: 1;
+  }
+
+  @include media('>=desktop') {
+    max-width: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 35px 17px 0;
+
+    @include media('>=desktop') {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      + li {
+        flex-grow: 1;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .visa {
+    background: url('../images/content/sprite-icons.png') no-repeat 0 -51px;
+    width: 36px;
+    height: 12px;
+  }
+
+  .mastercard {
+    background: url('../images/content/sprite-icons.png') no-repeat -40px -49px;
+    width: 26px;
+    height: 20px;
+  }
+
+  .qiwi {
+    background: url('../images/content/sprite-icons.png') no-repeat -70px -46px;
+    width: 56px;
+    height: 25px
+  }
+
+  .yandex {
+    background: url('../images/content/sprite-icons.png') no-repeat -130px -50px;
+    width: 87px;
+    height: 18px;
+  }
+}
+
+.social-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include media('>=tablet') {
+    order: 3;
+  }
+
+  @include media('>=desktop') {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
+.social-networks {
+  @extend %listreset;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+
+  @include media('>=desktop') {
+    margin-left: 100px;
+  }
+
+  li {
+    margin: 0 0 9px 28px;
+
+    @include media('>=desktop') {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

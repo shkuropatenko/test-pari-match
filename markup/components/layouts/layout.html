@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page">
+   <div class="page__wrapper">
+        %=symbols=%
+        {{#block "header"}}
+            {{> header/header}}
+        {{/block}}
+
+        {{#block "main"}}
+
+        {{/block}}
+
+        {{#block "footer"}}
+            {{> footer/footer}}
+        {{/block}}
+    </div>
+    <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    {{!
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery%=min=%.js"></script>
+    }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery%=min=%.js"></script>
+    <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+</body>
+</html>

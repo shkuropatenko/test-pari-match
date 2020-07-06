@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="home">
+    <div class="wrapper">
+
+      <div class="wrapper-holder">
+        %=symbols=%
+        {{> header/header}}
+        <main class="main">
+
+          <div class="container">
+
+            <h1 class="main-heading">
+              <span class="hide-text">ДЕЛАЙ СТАВКИ НА САМОГО БЫСТРОГО ПИЛОТА</span>
+              <img src="static/images/content/heading-text.png" alt="ДЕЛАЙ СТАВКИ НА САМОГО БЫСТРОГО ПИЛОТА">
+            </h1>
+
+            <div class="section-boxes">
+
+              <div class="rate">
+                <button class="btn"><span>сделать ставку</span></button>
+                <strong class="sub-text uppercase-text">+100% к депозиту</strong>
+                <a href="#" class="uppercase-text">правила и условия</a>
+              </div>
+
+              <div class="look">
+                <button class="btn btn-inverse"><span>смотреть</span></button>
+                <strong class="sub-text sub-text-small uppercase-text">детали турнира</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </main>
+
+        {{> footer/footer}}
+
+        <div data-relative-input="true" id="scene">
+          <div data-depth="0.1" class="left-illustration"><span></span></div>
+          <div data-depth="0.1" class="right-illustration"><span></span></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    {{!
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery%=min=%.js"></script>
+    }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery%=min=%.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+</body>
+
+</html>

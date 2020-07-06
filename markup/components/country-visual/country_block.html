@@ -1,0 +1,24 @@
+{{#each box}}
+  <div class="country-box {{class_style}}" style="background: url('static/images/content/{{bg_box}}') center/cover no-repeat">
+    <div class="sup-box">
+      <div class="flag-img">
+        <img src="static/images/content/flags/{{img_flag}}" alt="{{title}}">
+      </div>
+      <h2>{{title}}</h2>
+    </div>
+    <div class="sub-box">
+      <ul class="item-city">
+        {{#each list}}
+        <li>
+          <a href="#">{{label}}</a>
+        </li>
+        {{/each}}
+      </ul>
+      <div class="sub-box-holder">
+        <a href="#" class="more-link">And {{link_number}} more cities</a>
+        <a href="#" class="btn big-btn btn-light">Explore {{btn_number}} tours</a>
+      </div>
+    </div>
+  </div>
+{{/each}}
+
